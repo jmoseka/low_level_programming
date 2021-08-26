@@ -1,6 +1,8 @@
 #include<stdio.h>
-
-int main()
+/*
+*A function that prints with function puts
+*/
+int main(void)
 {
     puts("\"Programming is like building a multilingual puzzle");
    
