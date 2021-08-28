@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/*i*
+/**
  * main - a program that print letters and no.s using putchar
  *
  * Return: return 0
