@@ -5,6 +5,7 @@
 /**
  *main - Program that prints positive or negative
  *
+ *Return: return 0
  *
 */
 int main(void)
