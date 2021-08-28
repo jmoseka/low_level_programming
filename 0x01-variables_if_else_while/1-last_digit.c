@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#include <string.h>
+
 /**
  * main - program that prints the status of the last digit number
  *
@@ -17,15 +17,15 @@ int main(void)
 
 	if (lastNumber == 0)
 	{
-		puts("Last digit of %d is %d and is 0\n", n, lastNumber);
+		printf("Last digit of %d is %d and is 0\n", n, lastNumber);
 	}
 	else if (lastNumber > 5)
 	{
-		puts("Last digit of %d is %d and is greater than 5\n", n, lastNumber);
+		printf("Last digit of %d is %d and is greater than 5\n", n, lastNumber);
 	}
 	else if (lastNumber < 6)
 	{
-		puts("Last digit of %d is %d and is less than 6 and not 0\n", n, lastNumber);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastNumber);
 	}
 	return (0);
 }
