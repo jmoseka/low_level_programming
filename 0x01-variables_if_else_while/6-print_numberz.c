@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main -  a program that prints all single digit numbers of base ten using putchar
+ * main -  a program that prints numbers using putchar
  *
  * Return: return 0
  */
