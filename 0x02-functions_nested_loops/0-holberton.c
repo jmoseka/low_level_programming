@@ -8,14 +8,20 @@
  */
 int main(void)
 {
-	char c[] = "Holberton";
+	char c[] = "_putchar";
 	int length, i;
 
 	length = strlen(c);
 
 	for (i = 0; i < length; i++)
 	{
+		if (i == '\0')
+		{
+		}
+		else
+		{
 		_putchar(c[i]);
+		}
 	}
 	_putchar('\n');
 
