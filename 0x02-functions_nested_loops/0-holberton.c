@@ -15,13 +15,7 @@ int main(void)
 
 	for (i = 0; i < length; i++)
 	{
-		if (i == '\0')
-		{
-		}
-		else
-		{
 		_putchar(c[i]);
-		}
 	}
 	_putchar('\n');
 
