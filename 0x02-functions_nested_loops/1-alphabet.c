@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdbool.h>
 /**
  * print_alphabet - function that prints lowercase letter
  *
@@ -8,14 +8,15 @@
 void print_alphabet(void)
 {
 	int i = 97;
+	bool a = true;
 
-	while (true)
+	while (a)
 	{
 		_putchar(i);
 
 		if (i == 122)
 		{
-			return (false);
+			a = false;
 		}
 	}
 	_putchar('\n');
