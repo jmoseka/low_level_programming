@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
  * _islower - function that returns true for lower case number
@@ -10,18 +11,14 @@
 
 int _islower(int c)
 {
-	int i = 0;
+	int i = islower(c);
 
-	for (i = 97; i <= 122; i++)
+	if (i > 0)
 	{
-		if (c == i)
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}
+		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
