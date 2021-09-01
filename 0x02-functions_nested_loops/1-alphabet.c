@@ -15,12 +15,12 @@ void print_alphabet(void)
 	{
 		_putchar(i);
 
-		if (i == 97)
+		if (i == 122)
 		{
 			a = false;
 		}
 		i++;
 	}
-	_putchar('\n');
+	_putchar('\n')i;
 }
 
