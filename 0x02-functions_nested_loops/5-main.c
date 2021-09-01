@@ -9,5 +9,5 @@ int main(void)
 {
 	int r;
 
-	r = _isalpha('H');
+	r = print_sign(98);
 	return (0);
