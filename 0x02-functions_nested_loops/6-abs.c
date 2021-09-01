@@ -9,7 +9,8 @@
  * Return: return abs
  */
 
-int _abs(int)
+int _abs(int a)
 {
-	return (abs(int));
+	int a = abs(int a);
+	return (a);
 }
