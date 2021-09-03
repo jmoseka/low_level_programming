@@ -1,5 +1,6 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
+
 /**
  * main - prints the Fizz-Buzz test
  *
@@ -7,44 +8,27 @@
  */
 int main(void)
 {
-	int i = 1, length, j;
-	char fizz[] = "Fizz", buzz[] = "Buzz", fizzBuzz[] = "FizzBuzz";
+	int i = 1;
 
 	while (i <= 100)
 	{
-		if (i % 3 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
-			length = strlen(fizz);
-			for (j = 0; j < length; j++)
-			{
-				_putchar(fizz[j]);
-			}
+			printf("FizzBuzz");
 		}
 		else if (i % 5 == 0)
 		{
-			length = strlen(buzz);
-			for (j = 0; j < length; j++)
-			{
-				_putchar(buzz[j]);
-			}
+			printf("Buzz");
 		}
-		else if (i % 3 == 0 && i % 5 == 0)
+		else if (i % 3 == 0)
 		{
-			{
-			length = strlen(fizzBuzz);
-			for (j = 0; j < length; j++)
-				_putchar(fizzBuzz[j]);
-			}
+			printf("Fizz");
 		}
 		else
 		{
-			if (i >= 10)
-			{
-				_putchar(i / 10 + '0');
-			}
-			_putchar(j % 10 + '0');
+			printf("%d", i);
 		}
-		_putchar(' ');
+		printf(" ");
 		i++;
 	}
 	return (0);
