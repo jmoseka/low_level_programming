@@ -7,7 +7,9 @@
  */
 int main(void)
 {
-	int i = 1;
+	int i = 2, j = 1;
+
+	printf("%d", j);
 
 	while (i < 101)
 	{
