@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * _print_rev - prints a string in reverse
+ *print_rev - prints a string in reverse
  **@s: pointer to char
  */
 
@@ -13,7 +13,13 @@ void print_rev(char *s)
 
 	for (i = length; i >= 0; i--)
 	{
-		printf("%c", *(s + i));
+		if (i == '\0')
+		{
+		}
+		else
+		{
+			printf("%c", *(s + i));
+		}
 	}
 	printf("\n");
 }
