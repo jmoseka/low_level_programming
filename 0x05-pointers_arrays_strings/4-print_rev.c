@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * _puts - prints a string
+ * _print_rev - prints a string in reverse
  **@s: pointer to char
  */
 
