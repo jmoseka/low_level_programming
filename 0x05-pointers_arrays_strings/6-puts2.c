@@ -19,3 +19,4 @@ printf("%d", str[i]);
 
 printf(" ");
 }
+}
