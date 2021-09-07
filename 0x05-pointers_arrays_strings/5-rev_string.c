@@ -9,7 +9,8 @@
 void rev_string(char *s)
 {
 	int i, l = 0;
-	char b[20];
+
+	char b[50];
 
 	strcpy(b, s);
 
