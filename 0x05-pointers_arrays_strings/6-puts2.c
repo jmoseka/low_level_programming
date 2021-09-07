@@ -16,7 +16,7 @@ while (str[i] != '\0')
 if (i % 2 == 0)
 
 {
-printf("%c",str[i]);
+printf("%c", str[i]);
 }
 
 i++;
