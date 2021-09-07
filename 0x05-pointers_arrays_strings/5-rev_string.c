@@ -14,7 +14,7 @@ void rev_string(char *s)
 
 	strcpy(b, s);
 
-	while(*(s + l) != '\0')
+	while (*(s + l) != '\0')
 	{
 		l++;
 	}
