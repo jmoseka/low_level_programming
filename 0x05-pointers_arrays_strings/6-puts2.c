@@ -12,11 +12,14 @@ int i = 0;
 
 while (str[i] != '\0')
 {
+
 if (i % 2 == 0)
+
 {
-printf("%d", str[i]);
+printf("%c",str[i]);
 }
+
 i++;
 }
-printf(" ");
+printf("\n");
 }
