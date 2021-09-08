@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 
 /**
  *rev_string - reverses a string
@@ -8,19 +8,13 @@
 
 void puts_half(char *s)
 {
-	int i, l = 0;
+	int len;
 
-	char b[500];
-
-	strcpy(b, s);
-
-	while (*(s + l) != '\0')
+	while (*(s + len) != '\0')
 	{
-		l++;
+		len++;
 	}
+	printf("%s", s + len / 2);
 
-	for (i = 0; i < l / 2; i++)
-	{
-		*(s + i) = *(b + l - (i + 1));
-	}
+	printf("\n");
 }
