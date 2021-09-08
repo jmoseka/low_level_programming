@@ -1,13 +1,16 @@
 #include "main.h"
+#include <string.h>
 
 /**
- * _strncpy - Copies at most an inputted number
- *            of bytes from string src into dest.
- * @dest: The buffer storing the string copy.
- * @src: The source string.
- * @n: The maximum number of bytes to copied from src.
- *
- * Return: A pointer to the resulting string dest.
- */
-char *_strncpy(char *dest, char *src, int n)
+* _strcmp - compares two strings.
+* @s1: array one
+* @s2: array two
+*/
+int _strcmp(char *s1, char *s2)
 {
+	int result;
+
+	result = strcmp(s1, s2);
+
+	return (result);
+}
