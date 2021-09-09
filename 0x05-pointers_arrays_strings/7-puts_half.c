@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- *rev_string - reverses a string
- **@s: pointer to char
+ *puts_half - prints half of a string
+ **@s: passed string to be printed
  */
 
 void puts_half(char *s)
 {
-	int len;
+	int len = 0;
 
 	while (*(s + len))
 	{
