@@ -14,7 +14,13 @@ void puts_half(char *s)
 	{
 		len++;
 	}
-	printf("%s", s + len / 2);
+	len = len / 2;
+
+	while (*(s + len) != '\0')
+	{
+		s++;
+	}
+	 printf("%s", s);
 
 	printf("\n");
 }
