@@ -10,7 +10,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	strcat(dest, src);
+	while (*dest)
+	{
+		dest++;
+	}
+
+	while (*src)
+	{
+		*dest = *src;
+		src++;
+		dest++;
+	}
 
 	return (dest);
 }
