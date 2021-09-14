@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*_memset - Fills n bytes of memory area pointed to with constant byte c
+*_memcpy - Fills n bytes of memory area pointed to with constant byte c
 *@dest; a pointer that copies memory area
 *@src:The pointer to copy from
 *@n:The number of bytes to copy
