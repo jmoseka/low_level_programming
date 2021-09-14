@@ -1,5 +1,6 @@
 #include "main.h"
-#include <stddef.h>
+#include <string.h>
+
 /**
 *_strchr- checks for a character in a string
 *@s:A pointer to the string checking for a character
@@ -10,16 +11,7 @@
 
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	do {
-		if (s[i] == c)
-		{
-			s = s + i;
-			return (s);
-		}
-	} while (i++);
-
-	return (NULL);
+	char *p = strchr(s, c);
+	s = p;
+	return (s);
 }
-
