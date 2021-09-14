@@ -13,5 +13,5 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = strspn(s, accept);
 
-	return i;
+	return (i);
 }
