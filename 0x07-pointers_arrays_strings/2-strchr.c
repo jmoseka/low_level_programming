@@ -8,22 +8,26 @@
 *Return: A pointer a value or null
 */
 
+char *makeNull(char *p)
+{
+	p = NULL;
+	return (p);
+}
+
 char *_strchr(char *s, char c)
 {
 	int i = 0;
 
-	while (*(s + i))
+	do
 	{
 		if (s[i] == c)
 		{
 			s = s + i;
+			return (s);
 		}
-		if (s == 0)
-		{
-			s = NULL;
-		}
-		i++;
 	}
-	return (s);
+	while(i++);
+
+	return (NULL);
 }
 
