@@ -2,7 +2,7 @@
 
 /**
 *_memcpy - Fills n bytes of memory area pointed to with constant byte c
-*@dest; a pointer that copies memory area
+*@dest: a pointer that copies memory area
 *@src:The pointer to copy from
 *@n:The number of bytes to copy
 *
