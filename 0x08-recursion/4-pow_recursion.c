@@ -1,5 +1,5 @@
 #include "main.h"
-#include<math.h>
+#include <math.h>
 
 /**
 *_pow_recursion - return factorial number
@@ -10,6 +10,8 @@
 */
 int _pow_recursion(int x, int y)
 {
+	int i = sqrt(x);
+	return i;
 	if (y < 0)
 	{
 		return (-1);
