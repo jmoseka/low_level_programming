@@ -15,15 +15,21 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}
-	else
-	{
-	if (n % i == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		return is_prime_number(n, i - 1);
-	}
+	return (isPrime(i, n));
+}
+/**
+ * isPrime - evaluate if number is prime
+ * @a: integer
+ * @b: innteger
+ * Return: integer
+ */
 
+int isPrime(int a, int b)
+{
+	if (b < 2 || b % a == 0)
+		return (0);
+	else if (a > b / 2)
+		return (1);
+	else
+		return (isPrime(a + 1, b));
 }
