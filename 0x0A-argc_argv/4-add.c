@@ -1,35 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
-*main - prints its name
-*
-*@argc: count of the arguements supllied to the program
-*@argv: points to the strings of the arguement passed
-*
-*Return: 0 (success)
-*/
+ * main - add
+ * @argc:int
+ * @argv:string
+ * Return:int
+ */
 int main(int argc, char *argv[])
 {
-	int a, b, add, i;
-
-	for (i = 0; i < argc; i++)
-	{
-		if (argc < 0)
-		{
-			printf("Error\n");
-			return (0);
-		}
-	}
-
-	if (argc != 3)
-	{
-	printf("Error\n");
-	return (1);
-	}
-	a = atoi(argv[1]);
-	b = atoi(argv[2]);
-	add = a + b;
-	printf("%d\n", add);
-	return (0);
+int x = 0, i, j;
+for (i = 1; i < argc; i++)
+{
+for (j = 0; argv[i][j]; j++)
+{
+if (isdigit(argv[i][j]) == 0)
+{
+printf("Error\n");
+return (1);
+}
+}
+}
+for (i = 1; i < argc; i++)
+{
+x += atoi(argv[i]);
+}
+printf("%d\n", x);
+return (0);
 }
