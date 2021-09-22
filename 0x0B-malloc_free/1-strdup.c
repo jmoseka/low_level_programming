@@ -13,12 +13,15 @@ char *_strdup(char *str)
 {
 	char *ch;
 
-	ch = strdup(str);
-
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	ch = strdup(str);
 
+	if (ch == NULL)
+	{
+		return (NULL);
+	}	
 	return (ch);
 }
