@@ -11,7 +11,7 @@
 
 All files are compiled on Ubuntu 20.04 LTS using <b>gcc</b>, using the options <b>-Wall -Werror -Wextra -pedantic -std=gnu89</b>
 
-## List of Directories / Files
+## List of Directories
 
 <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x00-hello_world">0x00-hello_world</a>
 <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x01-variables_if_else_while">0x01-variables_if_else_while</a>
