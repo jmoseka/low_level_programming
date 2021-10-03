@@ -27,6 +27,7 @@ All files are compiled on Ubuntu 20.04 LTS using <b>gcc</b>, using the options <
 <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x0B-malloc_free">0x0B-malloc_free</a>
 <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x0C-more_malloc_free">0x0C-more_malloc_free</a>
 <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x0D-preprocessor">0x0D-preprocessor</a>
-  <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x0E-structures_typedef">0x0E-structures_typedef</a>
+ <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x0E-structures_typedef">0x0E-structures_typedef</a>
+ <li> <a href="https://github.com/jmoseka/alx-low_level_programming/tree/master/0x0F-function_pointers">0x0F-function_pointers</a>
 
 
