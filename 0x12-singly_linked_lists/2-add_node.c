@@ -7,6 +7,7 @@
 unsigned int _strlen(char *s)
 {
 	int i;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		continue;
@@ -14,7 +15,7 @@ unsigned int _strlen(char *s)
 	return (i);
 }
 /**
- *dd_node - adding node
+ *add_node - adding node
  *@head:last node list
  *@str:string
  *Return:new node created
@@ -22,6 +23,7 @@ unsigned int _strlen(char *s)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
+
 	if (str == NULL)
 		return (NULL);
 	new = malloc(sizeof(list_t));
