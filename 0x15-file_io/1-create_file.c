@@ -1,34 +1,41 @@
 #include "main.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 /**
- * read_textfile - read text and print it to POSIX
- * @filename: name of file char
- * @letters:number of letters to read size_t
- * Return: read the file display it or error 0
+ *  * _strlen - finds the length of a string
+ *   * @str: pointer to the string
+ *    *
+ *     * Return: length of the string
  */
-ssize_t read_textfile(const char *filename, size_t letters)
+size_t _strlen(char *str)
 {
-int fd, rd, wd;
-char *buff = malloc(sizeof(char) * letters);
-if (filename == NULL)
-{
-return (0);
+	size_t i;
+	for (i = 0; str[i]; i++)
+		;
+	return (i);
 }
-fd = open(filename, O_RDWR);
-if (fd == -1)
+/**
+ *  * create_file - creates a file.
+ *   * @filename: name of the file to create
+ *    * @text_content: NULL terminated string to write to the file
+ *     *
+ *      * Return: 1 on success, -1 on failure
+ */
+int create_file(const char *filename, char *text_content)
 {
-return (0);
-}
-rd = read(fd, buff, letters);
-if (rd == -1)
-{
-return (0);
-}
-wd = write(STDOUT_FILENO, buff, rd);
-if (wd == -1)
-{
-return (0);
-}
-close(fd);
-free(buff);
-return (wd);
+	int fd;
+	ssize_t len = 0;
+	if (filename == NULL)
+		return (-1);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (fd == -1)
+		return (-1);
+	if (text_content != NULL)
+		len = write(fd, text_content, _strlen(text_content));
+	close(fd);
+	if (len == -1)
+		return (-1);
+	return (1);
 }
