@@ -2,22 +2,18 @@
 #include <stdio.h>
 
 /**
-*print_chessboard - checks for a character in a string
-*@a: A pointer to 2D array
-*
-*/
-
+ * print_chessboard - print a chessboard
+ * @a: array
+ * Return: void
+ */
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; a[i][7]; i++)
 	{
 		for (j = 0; j < 8; j++)
-		{
-			printf("%c", a[i][j]);
-		}
-		printf("\n");
+			putchar(a[i][j]);
+		putchar('\n');
 	}
-	printf("\n");
 }
