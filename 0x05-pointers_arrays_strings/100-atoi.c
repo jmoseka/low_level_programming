@@ -1,45 +1,47 @@
 #include "main.h"
 
 /**
- *_atoi - convert string to int
- * @s: string to convert to integer
- * Return: digit(the integer)
+ * _atoi - converts a string to an integer
+ * @s: parameter name
+ *
+ * Return: value of integer
  */
 
 int _atoi(char *s)
 {
+	int i, j, k, len, m, tmp;
 
-	int idx_digit = (index_digit(s));
-	int sign;
-	int digits_to_print = 0;
-	int t = 1, i;
-	unsigned int num = 0;
-	int digit = (index_digit(s));
+	i = 0;
+	j = 0;
+	k = 0;
+	len = 0;
+	m = 0;
+	tmp = 0;
 
-	if (idx_digit < 0) /* if no digits, exit program */
-		return (0);
+	while (s[len] != '\0')
+		len++;
 
-	sign = _sign(s);
-
-	while ((s[idx_digit] >= '0' && s[idx_digit] <= '9')
-	       && (idx_digit <= _strlen(s))) /* count digits to print */
+	while (i < len && m == 0)
 	{
-		digits_to_print += 1;
-		idx_digit++;
-	}
+		if (s[i] == '-')
+			++j;
 
-	i = 1;
-	while (i < digits_to_print) /* find powers of ten to multiply places */
-	{
-		t *= 10;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			tmp = s[i] - '0';
+			if (j % 2)
+				tmp = -tmp;
+			k = k * 10 + tmp;
+			m = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			m = 0;
+		}
 		i++;
 	}
 
-	for (i = digit; i < (digit + digits_to_print); i++) /* calculate num */
-	{
-		num += (s[i] - '0') * t;
-		t /= 10;
-	}
+	if (m == 0)
+		return (0);
 
-	return (num * sign);
+	return (k);
 }
