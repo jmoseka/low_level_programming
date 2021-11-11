@@ -1,50 +1,40 @@
+#include "main.h"
 #include <stdlib.h>
-#include <string.h>
-#include "holberton.h"
 
 /**
- * str_concat - concatenates two string
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
  *
- * @s1: the first string
- * @s2: the second string
- *
- * Return: a concatenated string using malloc
+ * Return: pointer to newly allocated space in memory, or NULL if error
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	int len1, len2, len3;
-	int i, j;
-	char *ch;
+	unsigned int i, j, k, l;
+	char *s;
 
-	if (s1 != NULL)
+	if (s1 == NULL)
+		i = 0;
+	else
 	{
-		len1 = strlen(s1);
+		for (i = 0; s1[i]; i++)
+			;
 	}
-	if (s2 != NULL)
+	if (s2 == NULL)
+		j = 0;
+	else
 	{
-		len2 = strlen(s2);
+		for (j = 0; s2[j]; j++)
+			;
 	}
-
-	len3 = len1 + len2;
-
-	ch = malloc(len3 + 1 * sizeof(char));
-
-	if (ch == NULL)
-	{
+	k = i + j + 1;
+	s = malloc(k * sizeof(char));
+	if (s == NULL)
 		return (NULL);
-	}
-	if (s1 == NULL && s2 == NULL)
-	{
-		ch[0] = '\0';
-		return (ch);
-	}
-
-	for (j = 0; s2[j] != '\0'; j++)
-	{
-		ch[i] = s2[j];
-		i++;
-	}
-
-	return (ch);
+	for (l = 0; l < i; l++)
+		s[l] = s1[l];
+	for (l = 0; l < j; l++)
+		s[l + i] = s2[l];
+	s[i + j] = '\0';
+	return (s);
 }
