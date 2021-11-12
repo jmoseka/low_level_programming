@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
 {
 	int x, i;
 	unsigned char *p;
-
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -24,7 +23,7 @@ int main(int argc, char *argv[])
 	}
 	p = (unsigned char *)main;
 	i = 0;
-	if (x > 0)
+	if(x > 0)
 	{
 		while (i < (x - 1))
 			printf("%02hhx ", p[i++]);
