@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+
 /**
  * main - performs simple operations
- * @argc: arg count
- * @argv: arg value
- * Return:int
+ * @argc: number of arguments passed
+ * @argv: array of pointers to arguments
+ *
+ * Return: always 0
  */
 int main(int argc, char *argv[])
 {
 	int a, b, c;
-	int (*fun)(int, int);
+	int (*f)(int, int);
+
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -18,13 +21,13 @@ int main(int argc, char *argv[])
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	fun = get_op_func(argv[2]);
-	if (fun == NULL)
+	f = get_op_func(argv[2]);
+	if (f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	c = fun(a, b);
+	c = f(a, b);
 	printf("%d\n", c);
 	return (0);
 }
