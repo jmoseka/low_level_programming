@@ -1,60 +1,47 @@
-#include "dog.h"
 #include <stdlib.h>
-int _strlen(char *s);
-char *_strcpy(char *x, char *y);
+#include "dog.h"
+
 /**
- * new_dog - makes a new dog, memory and all
- * @name: name to create mem and assign to for dog
- * @age: age to assign to for dog
- * @owner: owner to create mem and assign to for dog
+ * new_dog - creates a new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
  *
- * Return: pointer to new dog_t (struct dog)
+ * Return: pointer to new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_d;
-	new_d = malloc(sizeof(dog_t));
-	if (new_d == NULL)
+	unsigned int nl, ol, i;
+	dog_t *dog;
+
+	if (name == NULL || owner == NULL)
 		return (NULL);
-	if (name == NULL)
-		new_d->name = NULL;
-	else
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
+	for (nl = 0; name[nl]; nl++)
+		;
+	nl++;
+	dog->name = malloc(nl * sizeof(char));
+	if (dog->name == NULL)
 	{
-		new_d->name = malloc(_strlen(name) + 1);
-		if (new_d->name == NULL)
-		{
-			free(new_d);
-			return (NULL);
-		}
-		new_d->name = _strcpy(new_d->name, name);
+		free(dog);
+		return (NULL);
 	}
-	if (owner == NULL)
-		new_d->owner = NULL;
-	else
+	for (i = 0; i < nl; i++)
+		dog->name[i] = name[i];
+	dog->age = age;
+	for (ol = 0; owner[ol]; ol++)
+		;
+	ol++;
+	dog->owner = malloc(ol * sizeof(char));
+	if (dog->owner == NULL)
 	{
-		new_d->owner = malloc(_strlen(owner) + 1);
-		if (new_d->owner == NULL)
-		{
-			free(new_d->name);
-			free(new_d);
-			return (NULL);
-		}
-		new_d->owner = _strcpy(new_d->owner, owner);
+		free(dog->name);
+		free(dog);
+		return (NULL);
 	}
-	new_d->age = age;
-	return (new_d);
-}
-/**
- *  * _strcpy - copies str
- *   * @x: pointer to destination of string
- *    * @y: pointer to source string to copy from
- *     * Return: pointer to dest
- *      */
-char *_strcpy(char *x, char *y)
-{
-	char *a = x;
-	while (*y)
-		*a++ = *y++;
-	*a = '\0';
-	return (x);
+	for (i = 0; i < ol; i++)
+		dog->owner[i] = owner[i];
+	return (dog);
 }
