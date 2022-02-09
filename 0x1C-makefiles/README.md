@@ -43,4 +43,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Cristina Rueda** - [CrisRuedaP](https://github.com/CrisRuedaP)
+* JAMILA MOSEKA
